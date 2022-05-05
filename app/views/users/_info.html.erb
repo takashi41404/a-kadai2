@@ -9,12 +9,16 @@
 	  <th><%= user.introduction %></th>
   </tr>
   <tr>
+    <td>
     <%= link_to user_followings_path(user) do %>
-      <td>follows: <%= user.followings.count %></td>
+      follows: <%= user.followings.count %>
     <% end %>
+    </td>
+    <td>
     <%= link_to user_followers_path(user) do %>
-      <td>followers: <%= user.followers.count %></td>
+      followers: <%= user.followers.count %>
     <% end %>
+    
   </tr>
   <% unless user == current_user %>
     <tr>
