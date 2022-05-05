@@ -1,8 +1,8 @@
 <div class='container'>
     <div class='col-md-8 offset-md-1'>
-  		<h2>followers</h2>
-  		  <table>
-  		    <tbody>
+    	<h2>followers</h2>
+    	  <table>
+    	    <tbody>
           <% @users.each do |user| %>
             <tr>
               <td><%= image_tag user.get_profile_image, size: '50x50' %></td>
@@ -18,7 +18,7 @@
                    <%= link_to "フォローする", user_relationships_path(user.id), method: :post %>
                  <% end %>
                 </td>
-             <% end %>
+             <% end %> 
             </tr>
           <% end %>
          </tbody>
